@@ -3,10 +3,12 @@
 'use strict';
 
 module.exports = function () {
-  $.gulp.task('sprite:png', function () {
+  $.gulp.task('sprite', function () {
     var spriteData = $.gulp.src('./source/icons/*.png').pipe($.gp.spritesmith({
-      imgName: 'sprite.png', // итоговый спрайт
-      cssName: 'sprite.scss', // файл стилей
+      imgName: 'sprite.png',
+      cssName: 'sprite.sass',
+      imgPath: '/assets/img/sprite.png',
+      cssFormat: 'sass',
       algorithm: 'left-right',
       padding: 20
     }));

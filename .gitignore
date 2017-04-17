@@ -6,6 +6,7 @@
 *.log
 *.orig
 *.rej
+*.psd
 *.sass-cache
 *.swo
 *.swp
@@ -22,6 +23,7 @@
 .project
 .settings
 .tmproj
+.vscode
 Thumbs.db
 
 # Folders to ignore

@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function () {
-  $.gulp.task('sprite:svg', function () {
+  $.gulp.task('svg', function () {
     return $.gulp.src('./source/sprite/*.svg')
       .pipe($.gp.svgmin({
         js2svg: {
