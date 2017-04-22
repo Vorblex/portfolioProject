@@ -1,0 +1,125 @@
+.header
+  position: relative
+  min-height: 607px
+  background: #4c8694 url('/assets/img/bg-header.jpg') center no-repeat fixed
+  background-size: cover
+
+
+.header__top
+  @extend %clearfix
+  padding: 30px
+  padding-top: 28px
+
+.socials
+  float: left
+  padding-top: 2px
+
+.socials__item
+  +inlineblock(middle)
+  margin-right: 21px
+
+.socials__link
+  display: block
+  font-size: 0
+  opacity: 0.5
+  transition: .3s
+
+  &:hover
+    opacity: 1
+
+.icon
+  +inlineblock(middle)
+
+
+.icon__header
+  fill: #fff
+  width: 30px
+  height: 22px
+
+//header menu
+.menu
+  float: right
+  width: 40px
+  height: 35px
+
+.menu__link
+  display: block
+  width: 100%
+  height: 100%
+  position: relative
+
+  &::before
+    content: ''
+    display: block
+    width: 40px
+    height: 5px
+    background: #fff
+    border-radius: 5px
+
+  &::after
+    content: ''
+    display: block
+    width: 40px
+    height: 5px
+    background: #fff
+    border-radius: 5px
+
+.menu__toggle
+  display: block
+  width: 40px
+  height: 5px
+  background: #fff
+  border-radius: 5px
+  margin: 10px 0
+  position: relative
+
+//header hero
+.header__hero
+  min-height: 380px
+  max-width: 1200px
+  position: relative
+  margin: auto
+  padding-top: 20px
+
+.header__bg-svg
+  position: absolute
+  display: block
+  height: 100%
+  width: 99%
+  opacity: .06
+  fill: #fdfdfd
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.user
+  margin-top: -15px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  text-align: center
+
+.user__pic
+  width: 140px
+  height: 140px
+  overflow: hidden
+  border-radius: 50%
+  margin: auto
+  margin-bottom: 18px
+
+.user__img
+  display: block
+  min-width: 100%
+
+.user__title
+  +roboto(medium)
+  font-size: 35px
+  color: #fff
+
+.user__desc
+  +roboto(light)
+  font-size: 16px
+  color: #fff
+
+

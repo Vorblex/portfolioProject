@@ -1,0 +1,37 @@
+extends ../aboutTemp
+
+block variables
+  - var title = 'About me'
+
+block content
+  .triangle__svg
+    svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+      polygon(class = "triangle-left_about" points="0,0   0,86   500.8,86   500.8,81.5")
+      polygon(class = "triangle-right_about" points="1000,0   1000,86   500,86   500,81.5")
+
+  section.section-about
+    .about__left
+      .about__info
+        .about__title
+          svg(class="about_title-svg")
+            use(xlink:href="/assets/img/sprite.svg#about_header")
+          .title Обо мне
+        .about__pic
+          img(src='/assets/img/user-big.jpg' alt='user').about__img
+        .subtitle.user__subtitle Кто я
+        p.
+          Я веб разработчик из Новосибирска. Мне 27 лет.  Я занимаюсь разработкой современных сайтов  и приложений. Мне нравится делать интересные  и современные проекты.
+        p.
+          Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+
+    .about__right
+      .subtitle.subtitle__skills Чем ямогу быть вам полезен
+      p.
+        Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      ul.skills
+        li.skills__list
+          ul.skills__direct
+            .skills__title Frontend
+            li.skills__item
+              span.skills__desc Html 5

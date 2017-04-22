@@ -1,1 +1,38 @@
+header.header
+	.header__top
+		ul.socials
+			li.socials__item
+				a(href='src=#').socials__link wk
+					svg(class="icon icon__header")
+						use(xlink:href="/assets/img/sprite.svg#vk")
+			li.socials__item
+				a(href='src=#').socials__link git
+					svg(class="icon icon__header")
+						use(xlink:href="/assets/img/sprite.svg#github")
+			li.socials__item
+				a(href='src=#').socials__link in
+					svg(class="icon icon__header")
+						use(xlink:href="/assets/img/sprite.svg#in")
+
+			//.header__right
+		.menu
+			a(href='#').menu__link
+				.menu__toggle
+			ul.menu__list
+				li.menu__item
+					a(href='#').menu__item-link
+
+		a(href='#').nav-arrowlink
+			svg(class="arrow nav-arrow")
+				use(xlink:href="/assets/img/sprite.svg#arrow_down")
+	.header__hero
+		svg(class="header__bg-svg")
+			use(xlink:href="/assets/img/sprite.svg#portfolio_header")
+		.user
+			.user__pic
+				img(src='/assets/img/user.jpg' alt='user photo').user__img
+			.user__title Александр Воробей
+			.user__desc Личный сайт веб разработчика
+
+
 
