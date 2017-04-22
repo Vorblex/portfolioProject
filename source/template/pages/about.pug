@@ -11,11 +11,11 @@ block content
 
   section.section-about
     .about__left
+      .about__title-sec
+        svg(class="about_title-svg")
+          use(xlink:href="/assets/img/sprite.svg#about_header")
+        .title.title_about Обо мне
       .about__info
-        .about__title
-          svg(class="about_title-svg")
-            use(xlink:href="/assets/img/sprite.svg#about_header")
-          .title Обо мне
         .about__pic
           img(src='/assets/img/user-big.jpg' alt='user').about__img
         .subtitle.user__subtitle Кто я
@@ -34,4 +34,60 @@ block content
           ul.skills__direct
             .skills__title Frontend
             li.skills__item
-              span.skills__desc Html 5
+              span.skills__desc HTML5
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+            li.skills__item
+              span.skills__desc CSS3
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-85")
+            li.skills__item
+              span.skills__desc JavaScript & jQuery
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-75")
+
+          ul.skills__direct
+            .skills__title Backend
+            li.skills__item
+              span.skills__desc PHP
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-35")
+            li.skills__item
+              span.skills__desc MySQL
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-25")
+            li.skills__item
+              span.skills__desc Node.js &npm
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-75")
+            li.skills__item
+              span.skills__desc Mongo.db
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-65")
+
+          ul.skills__direct
+            .skills__title Workflow
+            li.skills__item
+              span.skills__desc Git
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-85")
+            li.skills__item
+              span.skills__desc Gulp
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+            li.skills__item
+              span.skills__desc Bower&Yarn
+              svg(class="circles" viewBox='0 0 110 110')
+                circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+
+  section(id="map" class="map__section")
