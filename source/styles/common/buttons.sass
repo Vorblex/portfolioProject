@@ -1,23 +1,45 @@
 .btn
-  position: relative
-  display: inline-block
+  +roboto(medium)
   color: #fff
   text-decoration: none
   transition: .3s
+  height: 45px
 
-.btn-green
-  padding: 14px 53px
-  background: $green
+.btn_auth
+  border: 1px solid #fff
+  background: none
+  position: absolute
+  width: 180px
+  top: 24px
+  right: 96px
+
 
   &:hover
-    background: $greenactive
+    background: #fff
+    color: $green
 
-.btn-green_radius
+.btn-green
+  +roboto(medium)
+  color: #fff
+  background: rgba($green, 0.7)
+  transition: .3s
+
+  &:hover
+    background: rgba($greenactive, 0.7)
+
+.btn_radius
   border-radius: 5px
   padding: 11px 20px
 
 .btn_iconed
   padding-left: 50px
+  position: relative
+  display: inline-block
+  background: $green
+  transition: .3s
+
+  &:hover
+    background: $greenactive
 
 .btn-site-svg
   position: absolute
@@ -35,11 +57,8 @@
   display: block
   border: none
   outline: none
-  background: rgba(#26bbaa, 0.85)
-  transition: .3s
-
-  &:hover
-    background: rgba(#26c9b2, 0.3)
+  +roboto(medium)
+  color: #fff
 
 .btn-form_left
   left: 0
@@ -52,6 +71,18 @@
 
 .btn-form_half
   width: 50%
+
+.btn-form_40
+  width: 41%
+
+.btn-form_26
+  width: 26%
+  //left: 74%
+
+.btn-form_mid
+  left: 41%
+  width: 33%
+  border-right: 2px solid rgba(#dee3e7, 0.5)
 
 
 

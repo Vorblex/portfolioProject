@@ -1,0 +1,34 @@
+extends ../welcomeTemp
+
+block variables
+	- var title = 'Welcome'
+
+block content
+
+	button(type='button').btn.btn_auth.btn_radius Авторизоваться
+
+	.welcome-user
+		.welcome-user__top
+			.welcome-user__pic
+				img(src='/assets/img/user.jpg' alt='user photo').user__img
+			.welcome-user__title Александр Воробей
+			.welcome-user__desc Личный сайт веб разработчика
+
+			ul.socials_welcome
+				li.socials__item
+					a(href='src=#').socials__link wk
+						svg(class="icon icon_header icon_blue")
+							use(xlink:href="/assets/img/sprite.svg#vk")
+				li.socials__item
+					a(href='src=#').socials__link git
+						svg(class="icon icon_header icon_blue")
+							use(xlink:href="/assets/img/sprite.svg#github")
+				li.socials__item
+					a(href='src=#').socials__link in
+						svg(class="icon icon_header icon_blue")
+							use(xlink:href="/assets/img/sprite.svg#in")
+
+		button(type='button').btn-green.btn-form.btn-form_left.btn-form_40 Мои работы
+		button(type='button').btn-green.btn-form.btn-form_mid Обо мне
+		button(type='button').btn-green.btn-form.btn-form_right.btn-form_26 Блог
+
