@@ -1,7 +1,76 @@
 extends ../worksTemp
 
 block variables
-  - var title = 'Another page'
+	- var title = "My works"
 
 block content
-  h1 It's some another page
+	.triangle__svg
+		svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+			polygon(class = "triangle-left_works" points="0,0   0,86   500.8,86   500.8,81.5")
+			polygon(class = "triangle-right_works" points="1000,0   1000,86   500,86   500,81.5")
+	section.section-works
+		.section-title_works
+			svg(class="works_title-svg")
+				use(xlink:href="/assets/img/sprite.svg#works_header")
+			h1.title Мои раборы
+
+		.works
+			.works__left
+				.site
+					h4.subtitle.subtitle_site Сайт школы онлайн образования
+					span.site__desc Html, Css, Javascript
+					a(href="#").btn.btn_iconed Посмотреть сайт
+						svg(class="btn-iconed-svg")
+							use(xlink:href="/assets/img/sprite.svg#link")
+
+			.works__right
+				.slider
+					.slider__view
+						img(src="/assets/img/view.png" alt="slide").slider__view-img
+
+					a(href="#").slider__control-left
+						img(src="/assets/img/work-1.png" alt="thumb").slider__control-img.slider__control-img_left
+						svg(class="arrow slider-arrow")
+							use(xlink:href="/assets/img/sprite.svg#arrow_down")
+
+					a(href="#").slider__control-right
+						img(src="/assets/img/work-4.png" alt="thumb").slider__control-img.slider__control-img_right
+						svg(class="arrow slider-arrow")
+							use(xlink:href="/assets/img/sprite.svg#portf_arrow_up")
+
+	section.section-contacts
+		.section-title_contacts
+			svg(class="contacts_title-svg")
+				use(xlink:href="/assets/img/sprite.svg#about_header")
+			h4.title.title_slim Что обо мне говорят
+		ul.reviews
+			li.reviews__item
+				p.
+					Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+				.reviews__person
+					.reviews__person-pic(style="background-image: url(/assets/img/kov.jpg)")
+					.reviews__person-info
+						span.reviews__person-title Ковальчук Дмитрий
+						span.reviews__person-desc основатель Loftschool
+
+			li.reviews__item
+				p.
+					Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+				.reviews__person
+					.reviews__person-pic(style="background-image: url(/assets/img/sab.jpg)")
+					.reviews__person-info
+						.reviews__person-title Сабанцев Владимир
+						.reviews__person-desc преподаватель
+
+
+		.communicat
+			.subtitle.subtitle_form Связаться со мной
+			form(action="").communicat__form
+				input(type="text" placeholder="Имя").input
+				input(type="email" placeholder="Email").input
+				textarea(placeholder="Введите ваше сообщение").input-textarea
+				.buttons-wrapper
+					button(type="button").btn.btn_form Отправить
+					button(type="button").btn.btn_form Очистить
+
+

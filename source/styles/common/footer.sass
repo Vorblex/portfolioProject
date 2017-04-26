@@ -1,0 +1,74 @@
+.footer
+  background: rgba($black, 0.85)
+  @extend %clearfix
+
+.footer__top
+  height: 73px
+  padding: 0 30px
+
+.nav-footer
+  float: left
+  +inlineblock(middle)
+  width: 50%
+  padding-top: 26px
+
+.nav-footer__item
+  +inlineblock(middle)
+  margin-right: 35px
+
+  &:last-child
+    margin-right: 0
+
+.nav-footer__link
+  text-decoration: none
+  +roboto(medium)
+  color: #fff
+  transition: .3s
+
+  &:hover
+    color: $green
+
+//socials
+.socials_footer
+  float: right
+  padding-top: 17px
+
+.socials__item_footer
+  +inlineblock(middle)
+  margin-right: 6px
+  overflow: hidden
+  border-radius: 50%
+
+  &:last-child
+    margin-right: 0
+
+.icon_footer
+  width: 36px
+  height: 36px
+  fill: rgba(#fff, 0.0)
+  stroke: #fff
+
+  &:hover
+    fill: #fff
+
+.footer__bottom
+  @extend %clearfix
+  height: 68px
+  padding: 0 30px
+  border-top: 1px solid rgba(#fff, 0.1)
+
+.info, .copyright
+  +roboto(light)
+  color: rgba(#fff, 0.5)
+
+.info
+  padding: 12px 0 0
+  float: left
+  max-width: 500px
+
+.copyright
+  float: right
+  max-width: 500px
+  padding: 26px 0 0px 0
+
+

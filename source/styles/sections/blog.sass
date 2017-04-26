@@ -1,0 +1,94 @@
+.triangle-left_blog, .triangle-right_blog
+  fill: #fff
+
+.blog
+  @extend %clearfix
+  padding-top: 59px
+  padding-bottom: $footer-height
+
+.sidebar
+  width: 22.7%
+  float: left
+  margin-right: 100px
+  padding-top: 5px
+
+.sidebar-menu
+  text-align: right
+  padding-right: 16px
+  padding-left: 50px
+
+.sidebar-menu__item
+  position: relative
+  margin-bottom: 10px
+
+  &:hover
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 3px
+      right: 0
+      top: 0
+      bottom: 0
+      height: 100%
+      background: $green
+
+.sidebar-menu__link
+  display: block
+  +roboto()
+  color: $blue
+  transition: .3s
+  padding: 10px 20px
+  text-decoration: none
+
+  &:hover
+    color: $green
+
+
+.blog__main
+  width: 55%
+  float: left
+
+.articles__item
+  padding-bottom: 75px
+  position: relative
+  margin-bottom: 64px
+
+  p
+    +roboto()
+    color: $blue
+    margin-bottom: 14px
+    line-height: 1.624
+    max-width: 880px
+
+  &::after
+    position: absolute
+    content: ''
+    display: block
+    height: 5px
+    width: 68.8%
+    bottom: 0
+    background: rgba($black, 0.07)
+
+  &:last-child
+    padding-bottom: 55px
+    margin-bottom: 0
+
+    &::after
+      display: none
+
+.articles__date
+  display: block
+  +roboto()
+  color: $green
+  margin-bottom: 19px
+
+.articles__pic
+  overflow: hidden
+  width: 100%
+
+.articles__img
+  max-width: 100%
+  max-height: 100%
+

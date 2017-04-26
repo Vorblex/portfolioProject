@@ -1,0 +1,120 @@
+extends ../aboutTemp
+
+block variables
+	- var title = "About me"
+
+block content
+	.triangle__svg
+		svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
+			polygon(class = "triangle-left_about" points="0,0   0,86   500.8,86   500.8,81.5")
+			polygon(class = "triangle-right_about" points="1000,0   1000,86   500,86   500,81.5")
+
+	section.section-about
+		.about__left
+			.about__title-sec
+				svg(class="about_title-svg")
+					use(xlink:href="/assets/img/sprite.svg#about_header")
+				.title.title_about Обо мне
+			.about__info
+				.about__pic
+					img(src="/assets/img/user-big.jpg" alt="user").about__img
+				.subtitle.user__subtitle Кто я
+				p.
+					Я веб разработчик из Новосибирска. Мне 27 лет.  Я занимаюсь разработкой современных сайтов  и приложений. Мне нравится делать интересные  и современные проекты.
+				p.
+					Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+
+		.about__right
+			.subtitle.subtitle__skills Чем я могу быть вам полезен
+			p.
+				Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+			ul.skills
+				li.skills__list
+					ul.skills__direct
+						li.skills__title Frontend
+						li.skills__item
+							span.skills__desc HTML5
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+						li.skills__item
+							span.skills__desc CSS3
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-85")
+						li.skills__item
+							span.skills__desc JavaScript & jQuery
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-75")
+
+					ul.skills__direct
+						li.skills__title Backend
+						li.skills__item
+							span.skills__desc PHP
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-35")
+						li.skills__item
+							span.skills__desc MySQL
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-25")
+						li.skills__item
+							span.skills__desc Node.js &npm
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-75")
+						li.skills__item
+							span.skills__desc Mongo.db
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-65")
+
+					ul.skills__direct
+						li.skills__title Workflow
+						li.skills__item
+							span.skills__desc Git
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-85")
+						li.skills__item
+							span.skills__desc Gulp
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+						li.skills__item
+							span.skills__desc Bower&Yarn
+							svg(class="circles" viewBox="0 0 110 110")
+								circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+								circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-95")
+
+	section.map__section
+		.map-wrapper(id="map")
+		.contactsinfo
+			.subtitle.subtitle_black Контакты
+			ul.contactsinfo__list
+				li.contactsinfo__item
+					svg(class="contactsinfo__svg")
+						use(xlink:href="/assets/img/sprite.svg#skype")
+					span.contactsinfo__text Vorblex
+
+				li.contactsinfo__item
+					svg(class="contactsinfo__svg")
+						use(xlink:href="/assets/img/sprite.svg#envelope")
+					span.contactsinfo__text vorblex@gmail.com
+
+				li.contactsinfo__item
+					svg(class="contactsinfo__svg")
+						use(xlink:href="/assets/img/sprite.svg#phone")
+					span.contactsinfo__text +38 093 064 75 01
+
+				li.contactsinfo__item
+					svg(class="contactsinfo__svg")
+						use(xlink:href="/assets/img/sprite.svg#map_marker")
+					span.contactsinfo__text г.Киев, ул. Макеевская
+
+
+
+

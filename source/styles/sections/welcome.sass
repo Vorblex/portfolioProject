@@ -1,0 +1,67 @@
+.wrapper__welcome
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: #4c8694 url('/assets/img/bg-header.jpg') center no-repeat
+  background-size: cover
+  text-align: center
+  min-width: 430px
+  overflow: hidden
+  min-height: 800px
+
+  &::before
+    content: ''
+    display: block
+    +inlineblock(middle)
+    height: 100%
+
+.welcome__top
+  background: rgba(#fcfcfc, 0.85)
+  padding: 40px 20px 41px
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+
+.welcome
+  position: relative
+  width: 380px
+  padding-bottom: 45px
+  +inlineblock(middle)
+
+.user__title_welcome
+  +roboto(medium)
+  font-size: 28px
+  color: $blue
+  margin-bottom: 2px
+
+.user__pic_welcome
+  margin-bottom: 11px
+
+.user__desc_welcome
+  +roboto()
+  color: $blue
+  margin-bottom: 32px
+
+.user__desc
+  +roboto()
+  color: #fff
+  margin-bottom: 32px
+
+
+.socials_welcome
+  padding-left: 23px
+
+.icon_blue
+  fill: $green
+
+.copyright_weclome
+  position: absolute
+  left: 50%
+  bottom: 30px
+  //bottom: 4.6%
+  //top: 96.4%
+  transform: translateX(-50%)
+  +roboto(light)
+  color: rgba(#fff, 0.5)
+

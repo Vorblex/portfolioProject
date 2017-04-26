@@ -15,7 +15,6 @@ html
 		//- favicon block end
 
 		link(rel='stylesheet' href='/assets/css/foundation.css')
-		link(href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet')
 		link(rel='stylesheet' href='/assets/css/main.css')
 		script(src='/assets/js/foundation.js' defer)
 		script(src='/assets/js/app.js' defer)
@@ -27,11 +26,8 @@ html
 	body
 		.wrapper
 			.maincontent
-				include common/header
+				include common/header_blog
 				block content
 
 
 		include common/footer
-
-		//script(src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBZdZjvlnPZ7mzYNUA-1NULENsPzewb0-s&callback=initMap"
-		//	async defer)

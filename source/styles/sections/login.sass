@@ -1,0 +1,142 @@
+.login-user__top
+  background: rgba(#fcfcfc, 0.85)
+  padding: 35px 20px 39px
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+
+.input-last
+  margin-bottom: 18px
+
+.input-wrap
+  display: inline-block
+  position: relative
+
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    width: 45px
+    height: 45px
+    background: #f0efe9
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+    z-index: 2
+
+.input_iconed
+  padding-left: 65px
+
+.input-svg
+  position: absolute
+  left: 15px
+  top: 15px
+  height: 16px
+  width: 16px
+  z-index: 3
+  fill: #c4cbcd
+
+.subtitle_auth
+  margin-bottom: 35px
+
+.checkbox-label
+  position: relative
+  display: inline-block
+  margin-bottom: 14px
+  cursor: pointer
+  //padding-left: 11px
+
+  //&::before
+  //  content: ''
+  //  position: absolute
+  //  left: 0
+  //  width: 20px
+  //  height: 20px
+  //  border: 1px solid #ccc
+  //  border-radius: 2px
+  //  margin-right: 11px
+  //  background: #fff
+
+.login__checkbox
+  position: absolute
+  visibility: hidden
+
+  &:checked
+    &+.checkbox-fake
+      background: $green
+      border-color: $green
+
+      .checkbox-svg
+        fill: #fff
+
+.checkbox-fake
+  width: 20px
+  height: 20px
+  +inlineblock(middle)
+  border: 1px solid #ccc
+  border-radius: 2px
+  margin-right: 11px
+  background: #fff
+
+  &:checked
+    background: $green
+
+.checkbox-svg
+  //position: absolute
+  //left: 3px
+  //top: 3px
+  height: 70%
+  width: 70%
+  fill: none
+
+.checkbox__text
+  +inlineblock(middle)
+  +roboto()
+  color: $blue
+
+.login-question
+  display: block
+  +roboto(bold)
+  color: $blue
+  margin-bottom: 6px
+
+.radios-wrap
+  padding-left: 24px
+
+.radio-label
+  position: relative
+  +roboto()
+  color: $blue
+  cursor: pointer
+  +inlineblock(middle)
+  margin-right: 66px
+
+  &:last-child
+    margin-right: 0px
+
+  &::before
+    position: absolute
+    right: 105%
+    bottom: 0
+    content: ''
+    display: block
+    width: 20px
+    height: 20px
+    border: 1px solid #ccc
+    border-radius: 50%
+    margin-right: 5px
+    background: #fff
+    cursor: pointer
+    transition: .3s
+
+
+.radio
+  position: absolute
+  visibility: hidden
+  &:checked
+    &+.radio-label
+      color: $green
+
+      &::before
+        background: $green
+        box-shadow: inset 0 0 0 5px #fff
+
