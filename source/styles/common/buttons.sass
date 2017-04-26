@@ -1,51 +1,42 @@
+//butons
 .btn
-  +roboto(medium)
-  color: #fff
-  text-decoration: none
-  transition: .3s
+  +inlineblock(middle)
+  font-size: 16px
+  position: relative
   height: 45px
+  line-height: 1.1
+  padding: 11.6px 20px 11.6px 20px
+  +roboto(medium)
+  text-align: center
+  background: none
+  text-decoration: none
+  border: none
+  outline: none
+  transition: .3s
+  cursor: pointer
+  color: #fff
+
+.btn_iconed
+  padding-left: 50px
+  background: $green
+  border-radius: 5px
+
+  &:hover
+    background: $greenactive
 
 .btn_auth
   border: 1px solid #fff
-  background: none
   position: absolute
   width: 180px
   top: 24px
   right: 96px
-  line-height: 2.55
-
+  border-radius: 5px
 
   &:hover
     background: #fff
     color: $green
 
-.btn-green
-  +roboto(medium)
-  color: #fff
-  background: rgba($green, 0.7)
-  transition: .3s
-  line-height: 2.55
-  text-decoration: none
-
-  &:hover
-    background: rgba($greenactive, 0.7)
-
-.btn_radius
-  border-radius: 5px
-  padding: 0px 20px
-
-.btn_iconed
-  padding-left: 50px
-  position: relative
-  display: inline-block
-  background: $green
-  transition: .3s
-  line-height: 2.55
-
-  &:hover
-    background: $greenactive
-
-.btn-site-svg
+.btn-iconed-svg
   position: absolute
   left: 18px
   top: 13px
@@ -53,40 +44,44 @@
   height: 20px
   fill: #fff
 
-//form btn
-.btn-form
+.buttons-wrapper
   position: absolute
   bottom: 0
-  height: 45px
-  display: block
-  border: none
-  outline: none
-  +roboto(medium)
-  color: #fff
-
-.btn-form_left
   left: 0
-  border-bottom-left-radius: 5px
-  border-right: 2px solid rgba(#dee3e7, 0.5)
-
-.btn-form_right
   right: 0
+  font-size: 0
+  overflow: hidden
+  text-align: left
+  border-bottom-left-radius: 5px
   border-bottom-right-radius: 5px
 
-.btn-form_half
+//form btn
+.btn_form
   width: 50%
+  background: rgba($green, 0.7)
+  border-right: 2px solid rgba(#dee3e7, 0.5)
 
-.btn-form_40
+  &:hover
+    background: rgba($greenactive, 0.7)
+
+  &:last-child
+    border: none
+
+.btn_form-left
   width: 41%
 
-.btn-form_26
-  width: 26%
-  //left: 74%
-
-.btn-form_mid
-  left: 41%
+.btn_form-mid
   width: 33%
-  border-right: 2px solid rgba(#dee3e7, 0.5)
+
+.btn_form-right
+  width: 26%
+
+
+
+
+
+
+
 
 
 

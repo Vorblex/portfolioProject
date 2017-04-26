@@ -7,45 +7,47 @@
   background: #4c8694 url('/assets/img/bg-header.jpg') center no-repeat
   background-size: cover
   text-align: center
-  min-height: 500px
+  min-width: 430px
+  overflow: hidden
+  min-height: 800px
 
   &::before
     content: ''
     display: block
     +inlineblock(middle)
     height: 100%
-    width: 0
 
-.welcome-user__top
+.welcome__top
   background: rgba(#fcfcfc, 0.85)
   padding: 40px 20px 41px
   border-top-left-radius: 5px
   border-top-right-radius: 5px
 
-.welcome-user
+.welcome
   position: relative
   width: 380px
   padding-bottom: 45px
   +inlineblock(middle)
 
-.welcome-user__title
+.user__title_welcome
   +roboto(medium)
   font-size: 28px
   color: $blue
   margin-bottom: 2px
 
-.welcome-user__pic
-  width: 140px
-  height: 140px
-  overflow: hidden
-  border-radius: 50%
-  margin: auto
+.user__pic_welcome
   margin-bottom: 11px
 
-.welcome-user__desc
+.user__desc_welcome
   +roboto()
   color: $blue
   margin-bottom: 32px
+
+.user__desc
+  +roboto()
+  color: #fff
+  margin-bottom: 32px
+
 
 .socials_welcome
   padding-left: 23px

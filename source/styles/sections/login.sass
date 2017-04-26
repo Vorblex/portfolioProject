@@ -7,6 +7,34 @@
 .input-last
   margin-bottom: 18px
 
+.input-wrap
+  display: inline-block
+  position: relative
+
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    left: 0
+    width: 45px
+    height: 45px
+    background: #f0efe9
+    border-top-left-radius: 5px
+    border-bottom-left-radius: 5px
+    z-index: 2
+
+.input_iconed
+  padding-left: 65px
+
+.input-svg
+  position: absolute
+  left: 15px
+  top: 15px
+  height: 16px
+  width: 16px
+  z-index: 3
+  fill: #c4cbcd
+
 .subtitle_auth
   margin-bottom: 35px
 
