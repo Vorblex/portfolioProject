@@ -1,8 +1,8 @@
-//adjustment vars
+//adjustments vars
 
-$footer-height: 148px
+$footer-height: 141px
 
-//adjustment styles
+//adjustments styles
 
 html
 	font-size: 16px
@@ -35,21 +35,28 @@ body
 	min-height: 100%
 	position: relative
 	overflow: hidden
+	min-width: 320px
 
-.wrapper:after
-	content: ""
-	display: block
-	height: $footer-height
+//.wrapper:after
+//	content: ""
+//	display: block
+//	height: $footer-height
 
-
+.maincontent
+	position: relative
 
 
 .container
-	margin: 0 auto
+	margin: auto
+	//padding: 0 30px
 	@extend %clearfix
+	max-width: 1140px
+
+svg
+	transition: fill 0.3s
 
 h1, h2, h3, h4, h5, h6
-	margin-top: 0
+	margin: 0
 	font-weight: normal
 
 ul

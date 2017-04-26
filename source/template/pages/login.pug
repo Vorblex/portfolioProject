@@ -1,0 +1,44 @@
+extends ../welcomeTemp
+
+block variables
+	- var title = "Login"
+
+block content
+
+	.welcome
+		.login-user__top
+			.subtitle.subtitle_auth Авторизуйтесь
+
+			form(action="#" method="post" id="login").login__form
+				.input-wrap
+					input.input_iconed(type="text" placeholder="Логин").input
+					svg(class="input-svg")
+						use(xlink:href="/assets/img/sprite.svg#login")
+
+				.input-wrap
+					input.input_iconed(type="password" placeholder="Пароль").input.input-last
+					svg(class="input-svg")
+						use(xlink:href="/assets/img/sprite.svg#password")
+
+				label.checkbox-label
+					input(type="checkbox").login__checkbox
+					span.checkbox-fake
+						svg(class="checkbox-svg")
+							use(xlink:href="/assets/img/sprite.svg#check")
+					span.checkbox__text Я человек
+
+
+				span.login-question Вы точно не робот?
+
+				.radios-wrap
+					input(type="radio" id="yes" checked name="answer" value="").radio
+					label(for="yes").radio-label Да
+						span.radio-fake
+
+					input(type="radio" id="no" name="answer" value="").radio
+					label(for="no").radio-label Не уверен
+						span.radio-fake
+				.buttons-wrapper
+					a(href="index.html").btn.btn_form На главную
+					button(type="button").btn.btn_form Войти
+
