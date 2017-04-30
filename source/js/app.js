@@ -1,11 +1,39 @@
-// (function () {
-// 'use strict';
-//
-//
-//
-//
-//
-// })();
+(function () {
+    // fadein welcome
+    $(window).load(function () {
+        $('.flipper').removeClass('unloaded');
+    });
+    // nav toggle
+    $('#toggle').click(function() {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
+    // blog toggle
+    $('.sidebar-toggle').click(function () {
+        $('.sidebar').toggleClass('active');
+        $('.maincontent').toggleClass('active');
+    });
+    // welcome flipper
+    $('#auth-flip').click(function () {
+       $(this).toggleClass('out');
+       $('.flipper-wrap').toggleClass('flip');
+    });
+
+    $('#auth-unflip').click(function () {
+        $('.flipper-wrap').toggleClass('flip');
+        $('#auth-flip').removeClass('out');
+    });
+
+    $('.unflip-wrap').click(function () {
+        if($('.flipper-wrap').hasClass('flip')) {
+            $('.flipper-wrap').removeClass('flip');
+            $('#auth-flip').removeClass('out');
+        }
+    });
+
+
+
+})();
 
 // var module = require('./module');
 

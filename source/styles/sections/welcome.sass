@@ -11,23 +11,59 @@
   overflow: hidden
   min-height: 800px
 
-  &::before
-    content: ''
-    display: block
-    +inlineblock(middle)
-    height: 100%
+.unflip-wrap
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.flipper
+  width: 380px
+  min-height: 395px
+  position: relative
+  transition: 0.7s
+  transform-style: preserve-3d
+  opacity: 1
+
+
+  &.unloaded
+    opacity: 0
+    transform: perspective(1000px) rotateX(-60deg) translateY(-20px)
+
+
+.flipper-wrap
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  perspective: 600px
+
+
+  &.flip
+    .flipper
+      transform: rotateY(180deg)
+
+
+.front, .back
+  position: absolute
+  top: 0
+  left: 0
+  backface-visibility: hidden
+  width: 380px
+
+.front
+  z-index: 2
+  transform: rotateY(0deg)
+
+.back
+  transform: rotateY(180deg)
 
 .welcome__top
   background: rgba(#fcfcfc, 0.85)
   padding: 40px 20px 41px
   border-top-left-radius: 5px
   border-top-right-radius: 5px
-
-.welcome
-  position: relative
-  width: 380px
-  padding-bottom: 45px
-  +inlineblock(middle)
 
 .user__title_welcome
   +roboto(medium)
@@ -59,9 +95,10 @@
   position: absolute
   left: 50%
   bottom: 30px
-  //bottom: 4.6%
-  //top: 96.4%
   transform: translateX(-50%)
   +roboto(light)
   color: rgba(#fff, 0.5)
+
+
+
 

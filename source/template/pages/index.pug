@@ -4,32 +4,69 @@ block variables
 	- var title = "Welcome"
 
 block content
-	a(href="login.html").btn.btn_auth Авторизоваться
+	.unflip-wrap
+	button(id="auth-flip").btn.btn_auth Авторизоваться
+	.flipper-wrap
+		.flipper.unloaded
+			.front
+				.welcome__top
+					.user
+						.user__pic.user__pic_welcome
+							img(src="/assets/img/user.jpg" alt="user photo").user__img
+						.user__title_welcome Александр Воробей
+						.user__desc_welcome Личный сайт веб разработчика
 
-	.welcome
-		.welcome__top
-			.user
-				.user__pic.user__pic_welcome
-					img(src="/assets/img/user.jpg" alt="user photo").user__img
-				.user__title_welcome Александр Воробей
-				.user__desc_welcome Личный сайт веб разработчика
+					ul.socials_welcome
+						li.socials__item
+							a(href="src=#").socials__link wk
+								svg(class="icon icon_header icon_blue")
+									use(xlink:href="/assets/img/sprite.svg#vk")
+						li.socials__item
+							a(href="src=#").socials__link git
+								svg(class="icon icon_header icon_blue")
+									use(xlink:href="/assets/img/sprite.svg#github")
+						li.socials__item
+							a(href="src=#").socials__link in
+								svg(class="icon icon_header icon_blue")
+									use(xlink:href="/assets/img/sprite.svg#in")
+				.buttons-wrapper
+					a(href="works.html").btn.btn_form.btn_form-left Мои работы
+					a(href="about.html").btn.btn_form.btn_form-mid Обо мне
+					a(href="blog.html").btn.btn_form.btn_form-right Блог
 
-			ul.socials_welcome
-				li.socials__item
-					a(href="src=#").socials__link wk
-						svg(class="icon icon_header icon_blue")
-							use(xlink:href="/assets/img/sprite.svg#vk")
-				li.socials__item
-					a(href="src=#").socials__link git
-						svg(class="icon icon_header icon_blue")
-							use(xlink:href="/assets/img/sprite.svg#github")
-				li.socials__item
-					a(href="src=#").socials__link in
-						svg(class="icon icon_header icon_blue")
-							use(xlink:href="/assets/img/sprite.svg#in")
-			.buttons-wrapper
-				a(href="works.html").btn.btn_form.btn_form-left Мои работы
-				a(href="about.html").btn.btn_form.btn_form-mid Обо мне
-				a(href="blog.html").btn.btn_form.btn_form-right Блог
+			.back
+				.login-user__top
+					.subtitle.subtitle_auth Авторизуйтесь
+
+					form(action="#" method="post" id="login").login__form
+						.input-wrap
+							input.input_iconed(type="text" placeholder="Логин").input
+							svg(class="input-svg")
+								use(xlink:href="/assets/img/sprite.svg#login")
+
+						.input-wrap
+							input.input_iconed(type="password" placeholder="Пароль").input.input-last
+							svg(class="input-svg")
+								use(xlink:href="/assets/img/sprite.svg#password")
+
+						label.checkbox-label
+							input(type="checkbox").login__checkbox
+							span.checkbox-fake
+								svg(class="checkbox-svg")
+									use(xlink:href="/assets/img/sprite.svg#check")
+							span.checkbox__text Я человек
 
 
+						span.login-question Вы точно не робот?
+
+						.radios-wrap
+							input(type="radio" id="yes" checked name="answer" value="").radio
+							label(for="yes").radio-label Да
+								span.radio-fake
+
+							input(type="radio" id="no" name="answer" value="").radio
+							label(for="no").radio-label Не уверен
+								span.radio-fake
+				.buttons-wrapper
+					button(id="auth-unflip").btn.btn_form На главную
+					button.btn.btn_form Войти

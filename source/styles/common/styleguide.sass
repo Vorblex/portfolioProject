@@ -1,6 +1,7 @@
 .title, .subtitle
   position: relative
   text-align: center
+  text-decoration: none
   +inlineblock(middle)
   line-height: 1.03
 
@@ -39,6 +40,20 @@
   &::before, &::after
     background: rgba(#fff, 0.2)
 
+.title_nav
+  color: #fff
+
+  &::before, &::after
+    width: 0
+    background: rgba(#fff, 0.2)
+    transition: .3s
+
+  &:hover
+    &::before, &::after
+      width: 22px
+
+
+
 .articles__subtitle
   font-size: 35px
   color: $blue
@@ -69,5 +84,11 @@
 
 .nav-arrowlink_bottom
   bottom: 73px + $footer-height
+
+  +tablet
+    bottom: 73px + $footer-height +40px
+
+  +phone
+    bottom: 73px + $footer-height +85px
 
 

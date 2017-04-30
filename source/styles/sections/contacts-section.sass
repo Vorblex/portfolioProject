@@ -21,10 +21,10 @@
 
 
 .section-contacts
-  min-height: 1139px
+  position: relative
+  min-height: 1280px
   background: url('/assets/img/bg-contacts.jpg') top center no-repeat
   background-size: cover
-  padding-bottom: 297px
 
   //reviews
 .reviews
@@ -48,6 +48,15 @@
     color: $blue
     line-height: 1.6
     margin-bottom: 22px
+
+    +phone
+      margin-bottom: 11px
+
+  +phone
+    width: 100%
+    display: block
+    margin-bottom: 50px
+    background-position: top center
 
 .reviews__person-pic
   +inlineblock(middle)

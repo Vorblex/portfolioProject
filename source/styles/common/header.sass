@@ -1,8 +1,10 @@
 .header
   position: relative
-  min-height: 607px
+  min-height: 650px
+  height: 100vh
   background: #4c8694 url('/assets/img/bg-header.jpg') center no-repeat fixed
   background-size: cover
+
 
 
 .header__top
@@ -36,46 +38,9 @@
   width: 30px
   height: 22px
 
-//header menu
-.menu
-  float: right
-  width: 40px
-  height: 35px
-
-.menu__link
-  display: block
-  width: 100%
-  height: 100%
-  position: relative
-
-  &::before
-    content: ''
-    display: block
-    width: 40px
-    height: 5px
-    background: #fff
-    border-radius: 5px
-
-  &::after
-    content: ''
-    display: block
-    width: 40px
-    height: 5px
-    background: #fff
-    border-radius: 5px
-
-.menu__toggle
-  display: block
-  width: 40px
-  height: 5px
-  background: #fff
-  border-radius: 5px
-  margin: 10px 0
-  position: relative
-
 //header hero
 .header__hero
-  min-height: 380px
+  height: 90vh
   max-width: 1200px
   position: relative
   margin: auto
@@ -87,7 +52,7 @@
   width: 99%
   opacity: .06
   fill: #fdfdfd
-  top: 50%
+  top: 40%
   left: 50%
   transform: translate(-50%, -50%)
 
@@ -100,7 +65,7 @@
 
 .user_header
   position: absolute
-  top: 50%
+  top: 40%
   left: 50%
   transform: translate(-50%, -50%)
 
@@ -116,7 +81,7 @@
 
 .user__img
   display: block
-  min-width: 100%
+  max-width: 100%
 
 .user__title
   +roboto(medium)

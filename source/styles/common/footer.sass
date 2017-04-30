@@ -3,14 +3,22 @@
   @extend %clearfix
 
 .footer__top
-  height: 73px
   padding: 0 30px
+  @extend %clearfix
 
 .nav-footer
   float: left
   +inlineblock(middle)
-  width: 50%
+  width: 70%
   padding-top: 26px
+  padding-bottom: 24px
+
+  +tablet
+    display: block
+    width: 100%
+    float: none
+    text-align: center
+    padding-bottom: 0
 
 .nav-footer__item
   +inlineblock(middle)
@@ -18,6 +26,9 @@
 
   &:last-child
     margin-right: 0
+
+  +phone
+    margin-right: 15px
 
 .nav-footer__link
   text-decoration: none
@@ -32,6 +43,13 @@
 .socials_footer
   float: right
   padding-top: 17px
+  padding-bottom: 21px
+
+  +tablet
+    display: block
+    width: 100%
+    float: none
+    text-align: center
 
 .socials__item_footer
   +inlineblock(middle)
@@ -52,23 +70,33 @@
     fill: #fff
 
 .footer__bottom
-  @extend %clearfix
-  height: 68px
-  padding: 0 30px
+  font-size: 0
+  padding: 10px 30px
   border-top: 1px solid rgba(#fff, 0.1)
 
 .info, .copyright
+  font-size: 16px
+  +inlineblock()
   +roboto(light)
   color: rgba(#fff, 0.5)
 
 .info
-  padding: 12px 0 0
-  float: left
-  max-width: 500px
+  width: 50%
+  padding-right: 5px
+
+  +tablet
+    display: block
+    width: 100%
+    text-align: center
 
 .copyright
-  float: right
-  max-width: 500px
-  padding: 26px 0 0px 0
+  width: 50%
+  padding-left: 5px
+
+  +tablet
+    display: block
+    width: 100%
+    text-align: center
+    padding-top: 10px
 
 
