@@ -2,7 +2,7 @@
   position: relative
   min-height: 650px
   height: 100vh
-  background: #4c8694 url('/assets/img/parallax/layer9.png') center no-repeat
+  background: #4c8694 url('/assets/img/parallax/layer9.jpg') center no-repeat
   background-size: cover
 
 
@@ -100,14 +100,13 @@
 
 .parallax__layer
   position: fixed
-  height: 130%
-  width: 120vmax
+  height: 100%
+  width: 2500px
+  left: 50%
+  top: 40%
+  margin-left: -1250px
   will-change: transform
   transform: translate3d(0, 0, 0)
-
-  +hd
-    height: 120%
-    width: 140vmax
 
   img
     position: absolute
@@ -115,7 +114,6 @@
     right: 0
     bottom: 0
     max-width: 100%
-    max-height: 100%
     display: block
 
 
