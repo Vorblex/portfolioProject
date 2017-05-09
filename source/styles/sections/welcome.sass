@@ -1,33 +1,59 @@
 .wrapper__welcome
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  background: #4c8694 url('/assets/img/bg-header.jpg') center no-repeat
+  position: relative
+  width: 100%
+  height: 100%
+  background: #4c8694 url('/assets/img/parallax/layer9.jpg') center no-repeat
   background-size: cover
   text-align: center
   min-width: 430px
-  overflow: hidden
   min-height: 800px
 
-  &::before
-    content: ''
-    display: block
-    +inlineblock(middle)
-    height: 100%
+.flipper
+  width: 380px
+  min-height: 395px
+  position: relative
+  transition: 0.7s
+  transform-style: preserve-3d
+  opacity: 1
+
+
+  &.unloaded
+    opacity: 0
+    transform: perspective(1000px) rotateX(-60deg) translateY(-20px)
+
+
+.flipper-wrap
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  perspective: 600px
+
+
+  &.flip
+    .flipper
+      transform: rotateY(180deg)
+
+
+.front, .back
+  position: absolute
+  top: 0
+  left: 0
+  backface-visibility: hidden
+  width: 380px
+
+.front
+  z-index: 2
+  transform: rotateY(0deg)
+
+.back
+  transform: rotateY(180deg)
 
 .welcome__top
   background: rgba(#fcfcfc, 0.85)
   padding: 40px 20px 41px
   border-top-left-radius: 5px
   border-top-right-radius: 5px
-
-.welcome
-  position: relative
-  width: 380px
-  padding-bottom: 45px
-  +inlineblock(middle)
 
 .user__title_welcome
   +roboto(medium)
@@ -59,9 +85,37 @@
   position: absolute
   left: 50%
   bottom: 30px
-  //bottom: 4.6%
-  //top: 96.4%
   transform: translateX(-50%)
   +roboto(light)
   color: rgba(#fff, 0.5)
+
+//parallax
+.parallaxM
+  position: relative
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
+.parallaxM__layer
+  position: absolute
+  height: 100%
+  width: 2500px
+  left: 50%
+  top: 40%
+  margin-left: -1250px
+  //left: -5%
+  //top: 5%
+  //width: 110%
+  will-change: transform
+  transform: translate3d(0, 0, 0)
+
+  img
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    max-width: 100%
+    max-height: auto
+    display: block
 

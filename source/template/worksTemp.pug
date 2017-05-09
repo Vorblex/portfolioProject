@@ -16,14 +16,14 @@ html
 
 		link(rel='stylesheet' href='/assets/css/foundation.css')
 		link(rel='stylesheet' href='/assets/css/main.css')
-		script(src='/assets/js/foundation.js' defer)
-		script(src='/assets/js/app.js' defer)
+
 
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
 
 	body
+		include common/nav
 		.wrapper
 			.maincontent
 				include common/header
@@ -32,4 +32,7 @@ html
 				a(href='#').nav-arrowlink.nav-arrowlink_bottom
 					svg(class="arrow nav-arrow")
 						use(xlink:href="/assets/img/sprite.svg#portf_arrow_up")
-		include common/footer
+
+
+		script(src='/assets/js/foundation.js' defer)
+		script(src='/assets/js/app.js' defer)

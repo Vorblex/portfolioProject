@@ -1,21 +1,77 @@
 .triangle-left_blog, .triangle-right_blog
   fill: #fff
 
+.maincontent
+  transition: transform .5s
+
+  +tablet
+    &.active
+      transform: translateX(80%)
+
 .blog
-  @extend %clearfix
+  position: relative
   padding-top: 59px
-  padding-bottom: $footer-height
 
 .sidebar
   width: 22.7%
-  float: left
-  margin-right: 100px
+  position: absolute
+  top: 105vh
   padding-top: 5px
+  z-index: 20
+
+  +hd
+    width: 25.7%
+
+  +tablet
+    display: block
+    position: fixed
+    transform: translateX(-100%)
+    top: 0
+    bottom: 0
+    width: 81%
+    background: $green
+    z-index: 10
+    transition: transform .5s
+
+  &.active
+    transform: translateX(0)
+
+
+.sidebar-toggle
+  position: absolute
+  display: none
+  top: 47%
+  left: 100%
+  transform: translate(-85%, 0%)
+  width: 5rem
+  height: 5rem
+  border-radius: 50%
+  background: $green
+  cursor: pointer
+
+  +tablet
+    display: block
+
 
 .sidebar-menu
   text-align: right
   padding-right: 16px
   padding-left: 50px
+
+  +hd
+    padding-left: 40px
+
+  +laptop
+    padding-left: 10px
+
+  +tablet
+    position: absolute
+    top: 50%
+    width: 95.5%
+    padding-right: 0
+    padding-left: 0
+    transform: translateY(-100%)
+
 
 .sidebar-menu__item
   position: relative
@@ -34,6 +90,9 @@
       height: 100%
       background: $green
 
+      +tablet
+        display: none
+
 .sidebar-menu__link
   display: block
   +roboto()
@@ -45,10 +104,20 @@
   &:hover
     color: $green
 
+  +tablet
+    +roboto()
+    color: rgba(#fff, 0.7)
+    padding-right: 5px
+
+    &:hover
+      +roboto(bold)
+      color: #fff
+
+
 
 .blog__main
-  width: 55%
-  float: left
+  padding-top: 50px
+
 
 .articles__item
   padding-bottom: 75px

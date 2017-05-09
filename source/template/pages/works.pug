@@ -8,69 +8,81 @@ block content
 		svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="traingle")
 			polygon(class = "triangle-left_works" points="0,0   0,86   500.8,86   500.8,81.5")
 			polygon(class = "triangle-right_works" points="1000,0   1000,86   500,86   500,81.5")
-	section.section-works
-		.section-title_works
-			svg(class="works_title-svg")
-				use(xlink:href="/assets/img/sprite.svg#works_header")
-			h1.title Мои раборы
 
-		.works
+	.section-title_works
+		svg(class="works_title-svg")
+			use(xlink:href="/assets/img/sprite.svg#works_header")
+		h1.title Мои раборы
+
+	section.section.works
+		.works__content
 			.works__left
-				.site
-					h4.subtitle.subtitle_site Сайт школы онлайн образования
-					span.site__desc Html, Css, Javascript
-					a(href="#").btn.btn_iconed Посмотреть сайт
-						svg(class="btn-iconed-svg")
-							use(xlink:href="/assets/img/sprite.svg#link")
-
+				.works-slider__content
+					.works-slider__content-wrapper
+						.works-slider__display
+							img.works-slider__display-pic(src='/assets/img/content/slider/3.png')
+						.works-slider__item-about
+							.works__subtitle.subtitle_site
+								.subtitle Сайт школы онлайн образования
+							.works__content-desc Html, Css, Javascript
+							.works__content-btn
+								a.works__content-view(href='#')
+									i.fa.works__content-view-icon.fa-link
+									|  Посмотреть сайт
 			.works__right
-				.slider
-					.slider__view
-						img(src="/assets/img/view.png" alt="slide").slider__view-img
-
-					a(href="#").slider__control-left
-						img(src="/assets/img/work-1.png" alt="thumb").slider__control-img.slider__control-img_left
-						svg(class="arrow slider-arrow")
-							use(xlink:href="/assets/img/sprite.svg#arrow_down")
-
-					a(href="#").slider__control-right
-						img(src="/assets/img/work-4.png" alt="thumb").slider__control-img.slider__control-img_right
-						svg(class="arrow slider-arrow")
-							use(xlink:href="/assets/img/sprite.svg#portf_arrow_up")
+				.works-slider
+					.works-slider__controls
+						a.works-slider__control-btn.works-slider__control-btn_left(href='#')
+							ul.works-slider__control-list
+								li.works-slider__control-item(data-full='/assets/img/content/slider/1.png', data-title='Агентсво интернет решений "ITLoft"', data-skills='node', data-link='http://itloft.ru/')
+									img.works-slider___control-img(src='/assets/img/content/slider/1.png')
+								li.works-slider__control-item(data-full='/assets/img/content/slider/2.png', data-title='Школа онлай-образования "LoftSchool"', data-skills='html5, CSS3, javascript, php', data-link='http://loftschool.com/')
+									img.works-slider___control-img(src='/assets/img/content/slider/2.png')
+								li.works-slider__control-item(data-full='/assets/img/content/slider/3.png', data-title='Портал обучающих уроков "LoftBlog"', data-skills='Ruby on Rails, javascript, RESTful', data-link='http://loftblog.ru/')
+									img.works-slider___control-img(src='/assets/img/content/slider/3.png')
+								li.works-slider__control-item(data-full='/assets/img/content/slider/4.png', data-title='Сайт "Атма йога"', data-skills='UX, design, seo', data-link='http://atmayoga.ru/')
+									img.works-slider___control-img(src='/assets/img/content/slider/4.png')
+						a.works-slider__control-btn.works-slider__control-btn_right(href='#')
+							img.works-slider___control-img(src='/assets/img/content/slider/2.png')
 
 	section.section-contacts
-		.section-title_contacts
-			svg(class="contacts_title-svg")
-				use(xlink:href="/assets/img/sprite.svg#about_header")
-			h4.title.title_slim Что обо мне говорят
-		ul.reviews
-			li.reviews__item
-				p.
-					Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-				.reviews__person
-					.reviews__person-pic(style="background-image: url(/assets/img/kov.jpg)")
-					.reviews__person-info
-						span.reviews__person-title Ковальчук Дмитрий
-						span.reviews__person-desc основатель Loftschool
+		.sections-contacts__bg
+			img(src='/assets/img/bg-contacts.jpg' alt='').sections-contacts__img
+		.container.container_contacts
+			.section-title_contacts
+				svg(class="contacts_title-svg")
+					use(xlink:href="/assets/img/sprite.svg#about_header")
+				h4.title.title_slim Что обо мне говорят
+			ul.reviews
+				li.reviews__item
+					p.
+						Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.reviews__person
+						.reviews__person-pic(style="background-image: url(/assets/img/kov.jpg)")
+						.reviews__person-info
+							span.reviews__person-title Ковальчук Дмитрий
+							span.reviews__person-desc основатель Loftschool
 
-			li.reviews__item
-				p.
-					Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-				.reviews__person
-					.reviews__person-pic(style="background-image: url(/assets/img/sab.jpg)")
-					.reviews__person-info
-						.reviews__person-title Сабанцев Владимир
-						.reviews__person-desc преподаватель
+				li.reviews__item
+					p.
+						Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+					.reviews__person
+						.reviews__person-pic(style="background-image: url(/assets/img/sab.jpg)")
+						.reviews__person-info
+							.reviews__person-title Сабанцев Владимир
+							.reviews__person-desc преподаватель
 
+			.blur-wrap
+				.blur-bg
+				.communicat
+					form(id="communicat" action="POST").communicat__form
+						.communicat__top
+							.subtitle.subtitle_form Связаться со мной
+							input(type="text" placeholder="Имя").input
+							input(type="email" placeholder="Email").input
+							textarea(placeholder="Введите ваше сообщение").input-textarea
+						.buttons-wrapper
+							button(type="button").btn.btn_form Отправить
+							button(type="button").btn.btn_form Очистить
 
-		.communicat
-			.subtitle.subtitle_form Связаться со мной
-			form(action="").communicat__form
-				input(type="text" placeholder="Имя").input
-				input(type="email" placeholder="Email").input
-				textarea(placeholder="Введите ваше сообщение").input-textarea
-				.buttons-wrapper
-					button(type="button").btn.btn_form Отправить
-					button(type="button").btn.btn_form Очистить
-
-
+		include ../common/footer

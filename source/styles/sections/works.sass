@@ -31,110 +31,406 @@
   width: 100%
   height: 90%
 
-//works
-.works
-  @extend %clearfix
-
-.works__left, .works__right
-  width: 50%
-  position: relative
-  min-height: 750px
-
-.works__left
-  float: left
-  background: #f0efe9
-
-.site
-  position: absolute
-  max-width: 420px
-  text-align: center
-  left: 50%
-  top: 50%
-  transform: translate(-50%, -50%)
-  margin-top: -4px
-
 .subtitle_site
   margin-bottom: 37px
 
-.site__desc
-  display: block
-  +roboto(medium)
-  line-height: 1
-  padding: 18px
-  color: $green
-  border-top: 1px solid $green
-  border-bottom: 1px solid $green
-  margin-bottom: 40px
-  
+//slider
+
+.works__left, .works__right
+  float: left
+  width: 50%
+  height: 100vh
+  min-height: 650px
+
+@media (max-width: 768px)
+  .works__left, .works__right
+    float: none
+    width: 100%
+    height: auto
+    min-height: 0
+
+.works__left
+  background: #f0efe9
+  position: relative
+
+.works-slider__content
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  text-align: center
+
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    height: 100%
+    width: 0
+
+@media (max-width: 768px)
+  .works-slider__content:before
+    display: none
+
+@media (max-width: 768px)
+  .works-slider__content
+    position: static
+
+@media (max-width: 768px)
+  .works-slider__item-about
+    padding: 0 6.25rem
+
+@media (max-width: 480px)
+  .works-slider__item-about
+    padding: 0 1.875rem
+
+.works-slider__content-wrapper
+  display: inline-block
+  vertical-align: middle
+  width: 90%
+
+@media (max-width: 768px)
+  .works-slider__content-wrapper
+    padding-bottom: 3.75rem
+    max-width: 100%
+    width: 100%
+
+@media (max-width: 480px)
+  .works-slider__content-wrapper
+    padding-bottom: 1.875rem
+
+.works-slider__content-inner
+  display: inline-block
+  vertical-align: middle
+
+.works__content
+  &:before
+    content: ""
+    display: table
+
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+.works__content-desc
+  padding: 1.25rem 0
+  border: 1px solid transparent
+  border-top-color: #acd6ce
+  border-bottom-color: #acd6ce
+  font-family: 'robotomedium'
+  text-transform: uppercase
+  font-size: 1rem
+  color: #acd6ce
+  margin-bottom: 2.5rem
+
+@media (max-width: 480px)
+  .works__content-desc
+    margin-bottom: 1rem
+    padding: 0.7rem 0
+
+.works__content-view
+  display: inline-block
+  vertical-align: top
+  padding: 0.9375rem 1.25rem
+  background: #00bfa5
+  color: #fff
+  font-family: 'robotomedium'
+  font-size: 1rem
+  text-decoration: none
+  -webkit-border-radius: 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
+  -moz-background-clip: padding
+  -webkit-background-clip: padding-box
+  background-clip: padding-box
+  transition: .3s
+
+  &:hover
+    background: $greenactive
+
+.works__content-view-icon
+  margin-right: 0.625rem
+
 .works__right
-  float: right
   background: #efebe0
 
-
-//slider
-.slider
-  position: absolute
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
-  max-width: 900px
-
-.slider__view
+.works-slider
+  width: 100%
+  height: 100%
   position: relative
-  height: 70%
-  overflow: hidden
 
-.slider__view-img
+.works-slider__display
+  width: 100%
   position: absolute
-  display: block
-  max-width: 75%
-  margin: auto
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+  left: 100%
+  top: 0
+  bottom: 30%
+  background: #eeebe0
 
-.slider__control-left, .slider__control-right
-  display: block
-  position: absolute
-  overflow: hidden
-  height: 30%
-  width: 50%
-  bottom: 0
-  background: #f1f1f1
-  background: radial-gradient(ellipse at 50% 100%, #f1f1f1 0%,#aaa89f 100%), radial-gradient(ellipse at center, #f1f1f1 0%, #9c9a91 100%)
-  //background-position: center
-  //background-repeat: no-repeat
-  //background-size: 100%
+@media (max-width: 768px)
+  .works-slider__display
+    position: static
+    background: #eeebe0
+    padding: 2.5rem 0
+    margin-bottom: 2.5rem
 
+@media (max-width: 480px)
+  .works-slider__display
+    padding: 2.25rem 0
 
-.slider__control-left
-  left: 0
-
-.slider__control-right
-  right: 0
-
-.slider__control-img
+.works-slider__display-list
   position: absolute
   top: 0
+  left: 0
   right: 0
   bottom: 0
+
+.works-slider__display-item
+  height: 100%
+  width: 100%
+  text-align: center
+
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    width: 0
+    height: 100%
+
+.works-slider__display-pic
+  max-width: 70%
+  max-height: 70%
+  position: absolute
+  top: 0
   left: 0
-  max-width: 100%
-  max-height: 100%
-  display: block
+  right: 0
+  bottom: 0
   margin: auto
 
-.slider__control-img_left
-  opacity: .4
+@media (max-width: 768px)
+  .works-slider__display-pic
+    position: static
 
-.slider__control-img_right
-  opacity: .6
-.slider-arrow
-  width: 43px
-  height: 27px
+.works-slider__controls
+  height: 30%
   position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+  bottom: 0
+  left: 0
+  right: 0
+
+@media (max-width: 768px)
+  .works-slider__controls
+    position: static
+
+.works-slider__control-btn
+  display: block
+  text-decoration: none
+  width: 50%
+  float: left
+  position: relative
+  height: 100%
+  overflow: hidden
+  outline: none !important
+  background: #ffffff
+  background: -moz-radial-gradient(center, ellipse cover, #fff 0%, #c5c5c5 100%)
+  background: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #c5c5c5 100%)
+  background: radial-gradient(ellipse at center, #ffffff 0%, #c5c5c5 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c5c5c5',GradientType=1 )
+
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: block
+    background-color: rgba(182, 180, 174, 0.7)
+    background-position: center center
+    background-repeat: no-repeat
+    z-index: 1
+
+  &:after
+    content: ""
+    display: block
+    width: 45px
+    height: 30px
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    margin: auto
+    z-index: 2
+    -webkit-transition: transform 0.3s
+    -moz-transition: transform 0.3s
+    -ms-transition: transform 0.3s
+    -o-transition: transform 0.3s
+    transition: transform 0.3s
+
+@media (max-width: 768px)
+  .works-slider__control-btn
+    height: 13.75rem
+
+@media (max-width: 480px)
+  .works-slider__control-btn
+    height: 11.25rem
+
+.works-slider__control-btn_left
+  &:after
+    background: url("/assets/img/content/icons/tr-bottom.png") center no-repeat
+    background-size: 95%
+
+  &:hover:after
+    animation: slideInDown .3s
+    -webkit-animation: slideInDown .3s
+    animation-fill-mode: forwards
+
+.works-slider__control-btn_right
+  &:after
+    background: url("/assets/img/content/icons/tr-top.png") center no-repeat
+    background-size: 95%
+
+  &:hover:after
+    animation: slideInUp .3s
+    -webkit-animation: slideInUp .3s
+    animation-fill-mode: forwards
+
+.works-slider__control-list
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+
+.works-slider__control-btn_left .works-slider__control-item
+  position: absolute
+  top: 0%
+  left: 0
+  width: 100%
+  height: 100%
+  bottom: 0%
+
+  &.active
+    top: 0
+
+.works-slider__control-btn_right .works-slider__control-item
+  position: absolute
+  bottom: 0%
+  left: 0
+  width: 100%
+  height: 100%
+  top: 100%
+
+  &.active
+    top: 0
+
+.works-slider___control-img
+  display: block
+  max-width: 70%
+  max-height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto
+
+.letter-span
+  opacity: 0
+  display: inline-block
+
+  &.active
+    opacity: 1
+    animation: bounceIn 1s
+    -webkit-animation: bounceIn 1s
+
+.letter-word
+  white-space: nowrap
+  display: inline-block
+
+@keyframes pulse
+  from
+    transform: scale3d(1, 1, 1)
+
+  50%
+    transform: scale3d(1.05, 1.05, 1.05)
+
+  to
+    transform: scale3d(1, 1, 1)
+
+@-webkit-keyframes pulse
+  from
+    transform: scale3d(1, 1, 1)
+
+  50%
+    transform: scale3d(1.05, 1.05, 1.05)
+
+  to
+    transform: scale3d(1, 1, 1)
+
+@keyframes bounceIn
+  from, 20%, 40%, 60%, 80%, to
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  0%
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+
+  20%
+    transform: scale3d(1.1, 1.1, 1.1)
+
+  40%
+    transform: scale3d(0.9, 0.9, 0.9)
+
+  60%
+    opacity: 1
+    transform: scale3d(1.03, 1.03, 1.03)
+
+  80%
+    transform: scale3d(0.97, 0.97, 0.97)
+
+  to
+    opacity: 1
+    transform: scale3d(1, 1, 1)
+
+@-webkit-keyframes bounceIn
+  from, 20%, 40%, 60%, 80%, to
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+  0%
+    opacity: 0
+    transform: scale3d(0.3, 0.3, 0.3)
+
+  20%
+    transform: scale3d(1.1, 1.1, 1.1)
+
+  40%
+    transform: scale3d(0.9, 0.9, 0.9)
+
+  60%
+    opacity: 1
+    transform: scale3d(1.03, 1.03, 1.03)
+
+  80%
+    transform: scale3d(0.97, 0.97, 0.97)
+
+  to
+    opacity: 1
+    transform: scale3d(1, 1, 1)
+
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 0, 0)
+
+  to
+    transform: translate3d(0, -100%, 0)
+
+@keyframes slideInDown
+  from
+    transform: translate3d(0, 0%, 0)
+
+  to
+    transform: translate3d(0, 100%, 0)
 

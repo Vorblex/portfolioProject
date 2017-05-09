@@ -7,20 +7,17 @@ $footer-height: 141px
 html
 	font-size: 16px
 
-	// +hd
-	// 	font-size: 16px
+	+hd
+		font-size: 15px
 
+	+laptop
+		font-size: 14px
 
-	// +laptop
-	// 	font-size: 15px
+	+tablet
+		font-size: 13px
 
-
-	// +tablet
-	// 	font-size: 14px
-
-
-	// +phone
-	// 	font-size: 12px
+	+phone
+		font-size: 12px
 
 body, html
 	width: 100%
@@ -45,12 +42,50 @@ body
 .maincontent
 	position: relative
 
+section
+	position: relative
 
 .container
+	position: relative
 	margin: auto
-	//padding: 0 30px
 	@extend %clearfix
-	max-width: 1140px
+	max-width: 1800px
+
+.container_contacts
+	padding-bottom: 300px
+
+	+tablet
+		padding-bottom: 320px
+
+	+phone
+		padding-bottom: 350px
+
+
+
+.container_blog
+	padding-bottom: 200px
+	width: 54.4%
+	margin-left: 28.3%
+
+
+
+	+tablet
+		padding-bottom: 220px
+		width: 100%
+		margin-left: 0
+
+	+phone
+		padding-bottom: 250px
+
+	+tablet
+		padding-left: 24px
+		padding-right: 24px
+
+	+phone
+		padding-left: 10px
+		padding-right: 10px
+
+
 
 svg
 	transition: fill 0.3s
@@ -79,10 +114,9 @@ textarea
 	box-sizing: border-box
 
 .footer
-	position: relative
-	height: $footer-height
+	position: absolute
+	bottom: 0
 	width: 100%
-	margin-top: -$footer-height
 
 
 // Examples
