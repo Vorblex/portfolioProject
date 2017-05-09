@@ -46,6 +46,8 @@ block content
 							img.works-slider___control-img(src='/assets/img/content/slider/2.png')
 
 	section.section-contacts
+		.sections-contacts__bg
+			img(src='/assets/img/bg-contacts.jpg' alt='').sections-contacts__img
 		.container.container_contacts
 			.section-title_contacts
 				svg(class="contacts_title-svg")
@@ -70,16 +72,17 @@ block content
 							.reviews__person-title Сабанцев Владимир
 							.reviews__person-desc преподаватель
 
-
-			.communicat
-				form(id="communicat" action="POST").communicat__form
-					.communicat__top
-						.subtitle.subtitle_form Связаться со мной
-						input(type="text" placeholder="Имя").input
-						input(type="email" placeholder="Email").input
-						textarea(placeholder="Введите ваше сообщение").input-textarea
-					.buttons-wrapper
-						button(type="button").btn.btn_form Отправить
-						button(type="button").btn.btn_form Очистить
+			.blur-wrap
+				.blur-bg
+				.communicat
+					form(id="communicat" action="POST").communicat__form
+						.communicat__top
+							.subtitle.subtitle_form Связаться со мной
+							input(type="text" placeholder="Имя").input
+							input(type="email" placeholder="Email").input
+							textarea(placeholder="Введите ваше сообщение").input-textarea
+						.buttons-wrapper
+							button(type="button").btn.btn_form Отправить
+							button(type="button").btn.btn_form Очистить
 
 		include ../common/footer
