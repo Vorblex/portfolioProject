@@ -1,7 +1,7 @@
 let scrollParallax = function () {
   var wScroll = window.pageYOffset;
   var layersAll = document.querySelectorAll('.parallax__layer');
-  var layers = Array.from(layersAll); //[].slice.call(layersAll);
+  var layers = [].slice.call(layersAll); //Array.from(layersAll);
   var strafe = wScroll / -125;
 
   layers.forEach(function (layer, i) {

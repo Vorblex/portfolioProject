@@ -1,4 +1,4 @@
-let map = (function () {
+let map = function () {
   var Maps;
   var Routes;
   var App;
@@ -186,6 +186,6 @@ let map = (function () {
   if ($('#map').length) {
     App.init();
   }
-})();
+};
 
 export {map};
