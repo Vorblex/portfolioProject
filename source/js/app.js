@@ -19,8 +19,6 @@ if ($('.flipper-wrap').length) {
   window.addEventListener('load', mouseParallax);
 }
 
-window.addEventListener('load', map);
-
 if ($('.blur-wrap').length) {
   blur.init();
 
@@ -29,6 +27,8 @@ if ($('.blur-wrap').length) {
   };
 }
 
-
+if ($('#map').length) {
+  map();
+}
 
 
