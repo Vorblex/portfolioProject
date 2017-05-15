@@ -20,7 +20,7 @@
         "global": false,
         "module": false
   },
-  
+
   "extends": "eslint:recommended",
   "rules": {
     "indent": [2, 2],
