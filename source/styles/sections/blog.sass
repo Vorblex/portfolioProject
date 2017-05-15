@@ -18,6 +18,10 @@
   padding-top: 5px
   z-index: 20
 
+  &.fixed
+    position: fixed
+    top: 0
+
   +hd
     width: 25.7%
 
@@ -75,8 +79,27 @@
 .sidebar-menu__item
   position: relative
   margin-bottom: 10px
+  +roboto()
+  color: $blue
+  transition: .3s
+  padding: 10px 20px
+  text-decoration: none
+  cursor: pointer
 
   &:hover
+    color: $green
+
+  +tablet
+    +roboto()
+    color: rgba(#fff, 0.7)
+    padding-right: 5px
+
+    &:hover
+      +roboto(bold)
+      color: #fff
+
+  &.sidebar-menu__item_active
+    color: $green
 
     &::after
       content: ''
@@ -92,27 +115,9 @@
       +tablet
         display: none
 
-.sidebar-menu__link
-  display: block
-  +roboto()
-  color: $blue
-  transition: .3s
-  padding: 10px 20px
-  text-decoration: none
-
-  &:hover
-    color: $green
-
-  +tablet
-    +roboto()
-    color: rgba(#fff, 0.7)
-    padding-right: 5px
-
-    &:hover
+    +tablet
       +roboto(bold)
       color: #fff
-
-
 
 .blog__main
   padding-top: 50px
