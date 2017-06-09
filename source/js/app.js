@@ -27,15 +27,22 @@ if ($('.sidebar').length) {
 }
 
 if ($('.skills').length) {
-  window.addEventListener('load', animateSkills.init);
+  animateSkills.init();
 }
 
 if ($('.flipper-wrap').length) {
   flip.init();
+}
+
+if ($('.parallaxM').length) {
   window.addEventListener('load', mouseParallax);
 }
 
-window.addEventListener('scroll', scrollParallax);
+
+if ($('.parallax').length) {
+  window.addEventListener('scroll', scrollParallax);
+}
+
 
 if ($('.blur-wrap').length) {
   blur.init();
@@ -51,6 +58,36 @@ if ($('#map').length) {
 
 
 
+var pageScroll = (function () {
+    var section = $('.section'),
+        sectionWorks = $('.works'),
+        offset = section.height(),
+        body = $('body'),
+        toBottom = $('.nav-arrowlink'),
+        toTop = $('.nav-arrowlink_bottom');
 
+    function topArrow() {
+        if(sectionWorks.length) {
+            body.animate({scrollTop: offset + 178}, 800);
+        }
+        else {
+            body.animate({scrollTop: offset}, 800);
+        }
 
+    }
 
+    function bottomArrow() {
+        body.animate({scrollTop: 0}, 800);
+    }
+
+    var attachEvent = function () {
+        toBottom.on('click', topArrow);
+        toTop.on('click', bottomArrow);
+    };
+    // attachEvent();
+    return {
+        init: attachEvent
+    };
+}());
+
+window.addEventListener('load', pageScroll.init);

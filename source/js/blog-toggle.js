@@ -6,7 +6,7 @@ let blogToggle = (function () {
     };
 
    let attachEvent = function () {
-       $('.sidebar-toggle').on('click', _toggle)
+       $('.sidebar-toggle').on('click', _toggle);
    };
 
    return {

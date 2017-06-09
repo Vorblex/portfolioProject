@@ -1,0 +1,31 @@
+extends ../adminTemp
+
+block content
+	.header_admin
+		.header_admin-title Панель администрирования
+		a(href='#').header_admin__link Вернуться на сайт
+
+	.tabs
+		ul.tabs__controls
+			.tabs__controls-item
+				a(href='#').tabs__controls-link tab 1
+			.tabs__controls-item
+				a(href='#').tabs__controls-link tab 2
+			.tabs__controls-item
+				a(href='#').tabs__controls-link tab 3
+			.tabs__controls-item
+				a(href='#').tabs__controls-link tab 4
+
+
+
+		ul.tabs__list
+			li.tabs__list-item
+				.admin
+					.admin__title Страница «Блог»
+					.admin__content
+						.admin__subtitle Добавить запись
+						form.admin__form
+							input(type="text" placeholder="Название").admin__form_input
+							input(type="text" placeholder="Дата").admin__form_input
+							textarea(placeholder="Содержание").admin__form_text
+							.admin__form-btn Сохранить
