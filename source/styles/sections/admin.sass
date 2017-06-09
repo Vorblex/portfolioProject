@@ -1,0 +1,111 @@
+.header_admin
+  height: 80px
+  background: $green
+  @extend %clearfix
+  padding: 15px 30px
+
+.header_admin-title
+  font-size: 28px
+  +roboto(medium)
+  color: #fff
+  float: left
+
+.header_admin__link
+  float: right
+  +roboto()
+  font-size: 16px
+  color: #fff
+  padding: 10px 0
+
+
+.tabs__controls
+  background: #f0efe9
+  font-size: 0
+
+.tabs__controls-item
+  display: inline-block
+  width: 15%
+  border-right: 2px solid #fff
+
+  *
+    font-size: 16px
+
+.tabs__controls-link
+  display: block
+  font-size: 16px
+  +roboto(medium)
+  padding: 15px
+  text-decoration: none
+  color: $blue
+  text-align: center
+  background: #f0efe9
+  transition: .3s
+
+
+  &:hover
+    color: $green
+    background: #fff
+    text-decoration: none
+
+
+.admin
+  position: relative
+  padding: 45px 30px
+  background-size: cover
+  height: 100vh
+  z-index: 1
+
+
+  &::before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: url(/assets/img/bg_admin.jpg) no-repeat
+    opacity: 0.15
+    z-index: -1
+
+.admin__title
+  font-size: 21px
+  +roboto(medium)
+  color: $blue
+  margin-bottom: 35px
+
+.admin__subtitle
+  +roboto(medium)
+  color: $blue
+  margin-bottom: 10px
+  
+.admin__form_input, .admin__form_text
+  display: block
+  padding: 0 20px
+  border: none
+  outline: none
+  background: #fff
+
+.admin__form_input
+  width: 300px
+  height: 45px
+  border-radius: 5px
+  margin-bottom: 20px
+
+.admin__form_text
+  height: 170px
+  width: 500px
+  margin-bottom: 30px
+  padding: 10px 20px
+
+.admin__form-btn
+  display: inline-block
+  color: rgba(#fff, 0.85)
+  background: $green
+  transition: .3s
+  +roboto(medium)
+  padding: 10px
+  border-radius: 5px
+
+  &:hover
+    color: #fff

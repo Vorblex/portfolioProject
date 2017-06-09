@@ -1,5 +1,11 @@
 nav(id="overlay").nav
 	ul.nav__list
+		each href, title in menu
+			li.nav__item
+				a(href=`${href}`).nav__link.title.title_nav= title
+
+//nav(id="overlay").nav
+	ul.nav__list
 		li.nav__item
 			a(href='works.html').nav__link.title.title_nav Мои работы
 		li.nav__item
